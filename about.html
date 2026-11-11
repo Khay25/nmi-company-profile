@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+       <meta charset="utf-8">
+    <title>PT NMI - Nusa Medika Indonesia</title>
+    
+    <!-- Favicon Logo PT NMI -->
+    <link rel="icon" href="img/Logo-NMI.jpg" type="image/png">
+
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+      <!-- Navbar & Hero Start -->
+<div class="container-fluid position-relative p-0">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
+        <a href="index.html" class="navbar-brand p-0">
+            <h1 class="text-primary m-0 d-flex align-items-center">
+                <img src="img/Logo-NMI-New.jpg" alt="Logo PT NMI" class="me-3" style="height: 45px; width: auto;">
+                Nusantara Medcare Indonesia
+            </h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="fa fa-bars"></span>
+        </button>
+               <div class="navbar-nav ms-auto py-0 d-flex align-items-center">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="about.html" class="nav-item nav-link active">About</a>
+
+                <!-- Products Dropdown (EDAN Style) -->
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Products</a>
+                            <div class="dropdown-menu m-0 shadow border-0 rounded-3">
+                                <a href="products/poct.html" class="dropdown-item py-2 fw-semibold">POCT</a>
+                                <a href="products/ivd.html" class="dropdown-item py-2 fw-semibold">IVD</a>
+                                <a href="products/ultrasound.html" class="dropdown-item py-2 fw-semibold">Ultrasound</a>
+                                <a href="products/monitoring.html" class="dropdown-item py-2 fw-semibold">Patient Monitoring</a>
+                                <a href="products/ecg.html" class="dropdown-item py-2 fw-semibold">ECG</a>
+                                <a href="products/obgyn.html" class="dropdown-item py-2 fw-semibold">OB & GYN</a>
+                            </div>
+                        </div>
+                        
+                <!-- Services Menu (Tetap Ada) -->
+                <a href="service.html" class="nav-item nav-link">Services</a>
+
+                <!-- Pages Dropdown (Tetap Ada) -->
+                <!--
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                    <div class="dropdown-menu m-0">
+                        <a href="appointment.html" class="dropdown-item">Appointment</a>
+                        <a href="feature.html" class="dropdown-item">Features</a>
+                        <a href="blog.html" class="dropdown-item">Our Blog</a>
+                        <a href="team.html" class="dropdown-item">Our Team</a>
+                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        <a href="404.html" class="dropdown-item">404 Page</a>
+                    </div>
+                </div>
+            -->
+                <a href="contact.html" class="nav-item nav-link me-3">Contact Us</a>
+                      <!-- Language Selector (Custom Standalone JS - No Bootstrap Dependency) -->
+                        <div class="position-relative me-3" style="z-index: 9999;">
+                            <button class="btn btn-outline-primary rounded-circle p-0 d-flex align-items-center justify-content-center shadow-sm" type="button" id="btnGlobeToggle" onclick="toggleLangDropdown(event)" style="width: 40px; height: 40px; background-color: #ffffff;">
+                                <i class="fa fa-globe fs-5 text-primary" style="pointer-events: none;"></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end shadow border-0 mt-2 position-absolute" id="customLangMenu" style="display: none; min-width: 140px; right: 0; top: 100%;">
+                                <li><a class="dropdown-item small py-2 fw-semibold" href="javascript:void(0)" onclick="selectLanguage('id')">🇮🇩 Indonesia (ID)</a></li>
+                                <li><a class="dropdown-item small py-2 fw-semibold" href="javascript:void(0)" onclick="selectLanguage('en')">🇬🇧 English (EN)</a></li>
+                                <li><a class="dropdown-item small py-2 fw-semibold" href="javascript:void(0)" onclick="selectLanguage('zh-CN')">🇨🇳 Chinese (ZH)</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Hidden Google Translate Container -->
+                        <div id="google_translate_element" style="display: none !important; visibility: hidden !important;"></div>
+                    </div>
+            </nav>
+        </div>
+        <!-- Navbar End -->
+
+
+       <!-- Header Start (Background Video Full Banner) -->
+    <div class="container-fluid bg-breadcrumb position-relative overflow-hidden py-5" style="padding-top: 140px !important; padding-bottom: 80px !important;">
+        <!-- Background Video -->
+        <video autoplay loop muted playsinline style="position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; transform: translate(-50%, -50%); object-fit: cover; z-index: 1; filter: brightness(0.5);">
+            <source src="ShortVideoforHome/about-vid.mp4" type="video/mp4">
+        </video>
+
+        <!-- Content Overlay Teks Header -->
+        <div class="container text-center py-5 position-relative" style="z-index: 2;">
+            <h1 class="text-white display-3 mb-3 animated slideInDown fw-bold">About Us</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a class="text-white" href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
+                    <li class="breadcrumb-item text-primary active" aria-current="page">About</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+      <!-- Vision & Mission Start -->
+        <div class="container-fluid py-5 bg-white">
+            <div class="container py-5">
+                <!-- Section Title -->
+                <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+                    <h1 class="display-4 fw-normal text-dark mb-3">Our Mission</h1>
+                </div>
+
+                <!-- 3 Cards Row -->
+                <div class="row g-4 justify-content-center">
+                    <!-- Card 1: Value Proposition -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 border-0 shadow-sm rounded-0 bg-light">
+                            <div class="overflow-hidden" style="height: 240px;">
+                                <img src="img/POCT-i500-Product2.jpg" class="w-100 h-100" style="object-fit: cover;" alt="Value Proposition">
+                            </div>
+                            <div class="card-body p-4 text-start">
+                                <h5 class="fw-semibold text-dark mb-3">Value Proposition</h5>
+                                <p class="text-secondary small mb-0" style="line-height: 1.6;">
+                                    PT Nusantara Medcare Indonesia is a healthcare company dedicated to improving the human condition around the world by delivering value-driven, innovative, and high-quality medical products and services.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Core Corporate Value -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 border-0 shadow-sm rounded-0 bg-light">
+                            <div class="overflow-hidden" style="height: 240px;">
+                                <img src="img/IVD-H90S&H99S-Product-Putih.jpg" class="w-100 h-100" style="object-fit: cover;" alt="Core Corporate Value">
+                            </div>
+                            <div class="card-body p-4 text-start">
+                                <h5 class="fw-semibold text-dark mb-3">Core Corporate Value</h5>
+                                <p class="text-secondary small mb-0" style="line-height: 1.6;">
+                                    Bring innovation and value together to improve the human condition.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Guiding Principle -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 border-0 shadow-sm rounded-0 bg-light">
+                            <div class="overflow-hidden" style="height: 240px;">
+                                <img src="img/USG-AcclarixLX3-Product-Putih.jpg" class="w-100 h-100" style="object-fit: cover;" alt="Guiding Principle">
+                            </div>
+                            <div class="card-body p-4 text-start">
+                                <h5 class="fw-semibold text-dark mb-3">Guiding Principle</h5>
+                                <p class="text-secondary small mb-0" style="line-height: 1.6;">
+                                    Operate with the utmost integrity, responsibility, and respect for cultures around the world.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Vision & Mission End -->
+
+
+       <!-- Our Network Section Start -->
+<div class="container-fluid py-5 bg-light position-relative">
+    <div class="container py-5">
+        <!-- Section Title -->
+        <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+            <h4 class="text-primary text-uppercase fw-bold" style="letter-spacing: 2px;">Our network</h4>
+            <h1 class="display-5 fw-bold mb-3">Our Distribution Network</h1>
+            <p class="text-muted fs-6">
+                PT Nusantara Medcare Indonesia telah menjangkau fasilitas kesehatan di seluruh pelosok Nusantara dengan jaringan distribusi dan layanan purna jual yang terintegrasi.
+            </p>
+            
+            <!-- Legend Indicators -->
+            <div class="d-flex justify-content-center align-items-center gap-4 mt-4">
+                <div class="d-flex align-items-center gap-2">
+                    <span class="rounded-circle bg-success d-inline-block" style="width: 12px; height: 12px;"></span>
+                    <small class="fw-bold text-dark">Headquarter (HQ)</small>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                    <span class="rounded-circle bg-primary d-inline-block" style="width: 12px; height: 12px;"></span>
+                    <small class="fw-bold text-dark">Branch Office</small>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                    <span class="rounded-circle bg-warning d-inline-block" style="width: 12px; height: 12px;"></span>
+                    <small class="fw-bold text-dark">Authorized Partner</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- Network Map Card -->
+        <div class="card border-0 shadow-sm overflow-hidden p-4 p-md-5 rounded-4" style="background: #ffffff;">
+            <div class="row align-items-center">
+                
+                <!-- Left Stat Box -->
+                <div class="col-lg-3 text-center text-lg-start mb-4 mb-lg-0" style="z-index: 2;">
+                    <div class="pe-lg-3">
+                        <h1 class="display-1 fw-bold text-success mb-0" style="font-size: 4.5rem; line-height: 1;">34+</h1>
+                        <h4 class="fw-bold text-dark mb-2">Provinsi</h4>
+                        <p class="text-muted small mb-0">
+                            Terdistribusi secara merata di seluruh rumah sakit, laboratorium, dan klinik di Indonesia.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right Map Vector (High-Precision Detailed Indonesia SVG Map) -->
+<div class="col-lg-9 position-relative">
+    <div class="indonesia-map-container position-relative text-center w-100" style="min-height: 380px;">
+        
+        <!-- Detailed SVG Vector Map of Indonesia -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" class="w-100 h-auto opacity-85" style="max-height: 440px; fill: #4ade80; filter: drop-shadow(0px 6px 15px rgba(0, 0, 0, 0.08));">
+            <g id="indonesia-real-map">
+                <!-- Sumatra & Small Islands -->
+                <path d="M75,205 Q90,175 110,140 Q130,110 160,85 Q185,65 205,55 Q215,65 210,80 Q195,100 175,130 Q155,160 145,190 Q135,215 155,235 Q170,250 190,265 Q210,275 235,285 Q220,305 195,295 Q170,285 145,265 Q120,245 95,225 Z" />
+                <path d="M190,175 Q205,160 220,170 Q210,185 195,185 Z" />
+                <path d="M230,240 Q245,230 255,245 Q240,260 225,250 Z" />
+                
+                <!-- Java, Madura & Bali -->
+                <path d="M260,320 C290,322 320,320 350,323 C380,325 410,322 440,325 C470,328 500,325 525,330 C515,342 475,340 435,338 C395,336 355,338 315,335 C285,333 260,330 255,325 Z" />
+                <path d="M480,315 Q500,312 510,318 Q495,322 480,318 Z" /> <!-- Madura -->
+                <path d="M533,332 Q543,330 548,335 Q540,340 532,335 Z" /> <!-- Bali -->
+
+                <!-- Nusa Tenggara (Lombok, Sumbawa, Flores, Sumba, Timor) -->
+                <path d="M552,334 Q562,332 567,337 Z" />
+                <path d="M572,334 Q592,332 602,338 Q582,342 572,337 Z" />
+                <path d="M610,332 Q640,330 655,336 Q635,342 610,336 Z" />
+                <path d="M600,350 Q620,348 630,355 Z" />
+                <path d="M665,335 Q695,330 710,345 Q690,350 670,342 Z" /> <!-- Timor -->
+
+                <!-- Kalimantan (Borneo) -->
+                <path d="M360,140 Q400,105 440,110 Q475,115 500,130 Q515,150 510,175 Q500,205 470,225 Q445,235 415,225 Q390,215 375,190 Q360,170 360,140 Z" />
+
+                <!-- Sulawesi (Celebes) -->
+                <path d="M545,150 C570,145 595,140 615,155 C600,165 575,165 565,175 C575,190 595,195 615,200 C590,208 570,205 560,215 C565,235 570,255 575,275 C560,275 550,255 548,230 C545,205 548,180 545,150 Z" />
+
+                <!-- Maluku Islands (Halmahera, Seram, Ambon, Buru) -->
+                <path d="M660,140 C675,130 685,145 675,165 C665,165 655,150 660,140 Z" /> <!-- Halmahera -->
+                <path d="M650,210 Q680,205 695,215 Q675,222 650,215 Z" /> <!-- Seram -->
+                <path d="M620,212 Q638,210 645,216 Z" /> <!-- Buru -->
+
+                <!-- Papua (Irian Jaya) -->
+                <path d="M725,185 C740,165 765,160 790,175 C820,180 850,175 880,180 C910,185 940,190 965,210 C970,240 955,270 925,290 C895,300 865,295 835,280 C815,265 780,255 755,245 C735,230 720,205 725,185 Z" />
+            </g>
+        </svg>
+        
+        <!-- High-Precision Marker Pins -->
+        <!-- 1. Jakarta HQ -->
+        <div class="map-pin pin-hq" style="top: 76%; left: 26%;" data-bs-toggle="tooltip" title="Jakarta (Headquarter)">
+            <div class="pin-pulse bg-success"></div>
+            <div class="pin-dot bg-success"></div>
+            <span class="pin-label fw-bold">Jakarta (HQ)</span>
+        </div>
+
+        <!-- 2. Medan -->
+        <div class="map-pin pin-branch" style="top: 24%; left: 14%;" data-bs-toggle="tooltip" title="Medan Branch">
+            <div class="pin-pulse bg-primary"></div>
+            <div class="pin-dot bg-primary"></div>
+            <span class="pin-label">Medan</span>
+        </div>
+
+        <!-- 3. Surabaya -->
+        <div class="map-pin pin-branch" style="top: 76%; left: 40%;" data-bs-toggle="tooltip" title="Surabaya Branch">
+            <div class="pin-pulse bg-primary"></div>
+            <div class="pin-dot bg-primary"></div>
+            <span class="pin-label">Surabaya</span>
+        </div>
+
+        <!-- 4. Balikpapan -->
+        <div class="map-pin pin-partner" style="top: 45%; left: 42%;" data-bs-toggle="tooltip" title="Balikpapan Partner">
+            <div class="pin-pulse bg-warning"></div>
+            <div class="pin-dot bg-warning"></div>
+            <span class="pin-label">Balikpapan</span>
+        </div>
+
+        <!-- 5. Makassar -->
+        <div class="map-pin pin-branch" style="top: 58%; left: 51%;" data-bs-toggle="tooltip" title="Makassar Branch">
+            <div class="pin-pulse bg-primary"></div>
+            <div class="pin-dot bg-primary"></div>
+            <span class="pin-label">Makassar</span>
+        </div>
+
+        <!-- 6. Jayapura -->
+        <div class="map-pin pin-partner" style="top: 46%; left: 82%;" data-bs-toggle="tooltip" title="Jayapura Partner">
+            <div class="pin-pulse bg-warning"></div>
+            <div class="pin-dot bg-warning"></div>
+            <span class="pin-label">Jayapura</span>
+        </div>
+
+    </div>
+</div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- Our Network Section End -->
+
+
+       <!-- Why Choose Us Section Start -->
+<div class="container-fluid py-5 bg-white position-relative">
+    <div class="container py-5">
+        
+        <!-- Section Header -->
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 700px;">
+            <div class="d-flex align-items-center justify-content-center gap-2 mb-2">
+                <span style="height: 2px; width: 40px; background-color: #00b4d8;"></span>
+                <h5 class="text-info text-uppercase fw-bold m-0" style="letter-spacing: 2px; color: #00b4d8 !important;">WHY CHOOSE US</h5>
+                <span style="height: 2px; width: 40px; background-color: #00b4d8;"></span>
+            </div>
+            <h1 class="display-5 fw-bold text-dark mb-3">Why Choose Us? Medical Excellence & Innovation</h1>
+            <p class="text-muted fs-6">
+                PT Nusantara Medcare Indonesia berdedikasi memberikan solusi teknologi medis canggih dengan standar kualitas tertinggi, dukungan teknis terpercaya, serta layanan purna jual di seluruh Indonesia.
+            </p>
+        </div>
+
+        <!-- 8 Cards Grid (4 Columns x 2 Rows) -->
+        <div class="row g-4">
+            
+            <!-- Card 1 -->
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="why-choose-card h-100 p-4 text-center rounded-4 border border-info bg-white d-flex flex-column align-items-center">
+                    <div class="why-icon-box mb-3 d-flex align-items-center justify-content-center rounded-3">
+                        <i class="fa fa-user-md fa-2x text-info"></i>
+                    </div>
+                    <h5 class="fw-bold text-dark mb-2">Licensed Specialist</h5>
+                    <p class="text-muted small mb-0">
+                        Didukung tim profesional medis dan spesialis aplikasi yang berpengalaman di bidangnya.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="why-choose-card h-100 p-4 text-center rounded-4 border border-info bg-white d-flex flex-column align-items-center">
+                    <div class="why-icon-box mb-3 d-flex align-items-center justify-content-center rounded-3">
+                        <i class="fa fa-briefcase-medical fa-2x text-info"></i>
+                    </div>
+                    <h5 class="fw-bold text-dark mb-2">Personalized Solutions</h5>
+                    <p class="text-muted small mb-0">
+                        Penyesuaian konfigurasi alat medis sesuai kebutuhan operasional klinik dan rumah sakit.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="why-choose-card h-100 p-4 text-center rounded-4 border border-info bg-white d-flex flex-column align-items-center">
+                    <div class="why-icon-box mb-3 d-flex align-items-center justify-content-center rounded-3">
+                        <i class="fa fa-hospital fa-2x text-info"></i>
+                    </div>
+                    <h5 class="fw-bold text-dark mb-2">Healthcare Goals</h5>
+                    <p class="text-muted small mb-0">
+                        Membantu fasilitas kesehatan mencapai efisiensi diagnostik dan keselamatan pasien.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="why-choose-card h-100 p-4 text-center rounded-4 border border-info bg-white d-flex flex-column align-items-center">
+                    <div class="why-icon-box mb-3 d-flex align-items-center justify-content-center rounded-3">
+                        <i class="fa fa-users fa-2x text-info"></i>
+                    </div>
+                    <h5 class="fw-bold text-dark mb-2">Practitioners Network</h5>
+                    <p class="text-muted small mb-0">
+                        Jaringan kemitraan luas dengan ribuan tenaga medis dan instansi kesehatan Nusantara.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="why-choose-card h-100 p-4 text-center rounded-4 border border-info bg-white d-flex flex-column align-items-center">
+                    <div class="why-icon-box mb-3 d-flex align-items-center justify-content-center rounded-3">
+                        <i class="fa fa-hand-holding-medical fa-2x text-info"></i>
+                    </div>
+                    <h5 class="fw-bold text-dark mb-2">Reliable Equipment</h5>
+                    <p class="text-muted small mb-0">
+                        Produk berkualitas dunia dengan sertifikasi standar internasional untuk hasil diagnostik terpercaya.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                <div class="why-choose-card h-100 p-4 text-center rounded-4 border border-info bg-white d-flex flex-column align-items-center">
+                    <div class="why-icon-box mb-3 d-flex align-items-center justify-content-center rounded-3">
+                        <i class="fa fa-heartbeat fa-2x text-info"></i>
+                    </div>
+                    <h5 class="fw-bold text-dark mb-2">Experienced Staff</h5>
+                    <p class="text-muted small mb-0">
+                        Teknisi berpengalaman bersertifikat yang siap membantu perawatan dan penanganan alat.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                <div class="why-choose-card h-100 p-4 text-center rounded-4 border border-info bg-white d-flex flex-column align-items-center">
+                    <div class="why-icon-box mb-3 d-flex align-items-center justify-content-center rounded-3">
+                        <i class="fa fa-tools fa-2x text-info"></i>
+                    </div>
+                    <h5 class="fw-bold text-dark mb-2">Technical Support</h5>
+                    <p class="text-muted small mb-0">
+                        Layanan pemeliharaan berkala, perbaikan cepat, dan jaminan ketersediaan suku cadang asli.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.8s">
+                <div class="why-choose-card h-100 p-4 text-center rounded-4 border border-info bg-white d-flex flex-column align-items-center">
+                    <div class="why-icon-box mb-3 d-flex align-items-center justify-content-center rounded-3">
+                        <i class="fa fa-certificate fa-2x text-info"></i>
+                    </div>
+                    <h5 class="fw-bold text-dark mb-2">Certified Quality</h5>
+                    <p class="text-muted small mb-0">
+                        Seluruh produk telah terdaftar resmi dan memenuhi regulasi kementerian kesehatan.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- More Details Button -->
+        <div class="text-center mt-5 wow fadeInUp" data-wow-delay="0.9s">
+            <a href="service.html" class="btn btn-info text-white fw-semibold px-4 py-2 rounded-pill shadow-sm" style="background-color: #00b4d8; border-color: #00b4d8;">
+                More Details
+            </a>
+        </div>
+
+    </div>
+</div>
+<!-- Why Choose Us Section End -->
+
+
+          <!-- Footer Start (PT NMI Style) -->
+    <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s" style="background: #111111; color: #a0a0a0;">
+        <div class="container py-5">
+            <div class="row g-5">
+                <!-- Kolom 1: Perusahaan -->
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <div class="mb-3">
+                            <img src="img/Logo-NMI.jpg" alt="PT NMI Logo" style="height: 45px; width: auto; display: block; border-radius: 4px;">
+                        </div>
+                        <p class="mb-4 small" style="line-height: 1.6;">
+                            PT Nusa Medika Indonesia is a trusted distributor of high-quality medical equipment, bringing innovation and value to support healthcare advancement across Indonesia.
+                        </p>
+                        <div class="d-flex align-items-center gap-2">
+                            <a class="btn btn-primary btn-sm-square rounded-circle" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-primary btn-sm-square rounded-circle" href="#"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-primary btn-sm-square rounded-circle" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kolom 2: Quick Links -->
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h5 class="text-white fw-bold mb-4">Quick Links</h5>
+                        <a href="index.html" class="text-secondary text-decoration-none mb-2 small"><i class="fas fa-angle-right me-2 text-primary"></i>Home</a>
+                        <a href="about.html" class="text-secondary text-decoration-none mb-2 small"><i class="fas fa-angle-right me-2 text-primary"></i>About PT NMI</a>
+                        <a href="service.html" class="text-secondary text-decoration-none mb-2 small"><i class="fas fa-angle-right me-2 text-primary"></i>Product Portfolio</a>
+                        <a href="blog.html" class="text-secondary text-decoration-none mb-2 small"><i class="fas fa-angle-right me-2 text-primary"></i>News & Events</a>
+                        <a href="contact.html" class="text-secondary text-decoration-none mb-2 small"><i class="fas fa-angle-right me-2 text-primary"></i>Contact Us</a>
+                    </div>
+                </div>
+
+                <!-- Kolom 3: Product Series -->
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h5 class="text-white fw-bold mb-4">Product Series</h5>
+                        <a href="products/poct.html" class="text-secondary text-decoration-none mb-2 small"><i class="fas fa-angle-right me-2 text-primary"></i>Point-of-Care Testing (POCT)</a>
+                        <a href="products/ivd.html" class="text-secondary text-decoration-none mb-2 small"><i class="fas fa-angle-right me-2 text-primary"></i>In-Vitro Diagnostics (IVD)</a>
+                        <a href="products/ultrasound.html" class="text-secondary text-decoration-none mb-2 small"><i class="fas fa-angle-right me-2 text-primary"></i>Ultrasound Imaging</a>
+                        <a href="products/monitoring.html" class="text-secondary text-decoration-none mb-2 small"><i class="fas fa-angle-right me-2 text-primary"></i>Patient Monitoring System</a>
+                        <a href="products/ecg.html" class="text-secondary text-decoration-none mb-2 small"><i class="fas fa-angle-right me-2 text-primary"></i>Diagnostic ECG</a>
+                    </div>
+                </div>
+
+
+                <!-- Kolom 4: Contact Info -->
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h5 class="text-white fw-bold mb-4">Contact Info</h5>
+                        <p class="text-secondary mb-2 small"><i class="fa fa-map-marker-alt me-2 text-primary"></i>Jakarta Barat, Indonesia</p>
+                        <p class="text-secondary mb-2 small"><i class="fas fa-phone-alt me-2 text-primary"></i>+62 21 1234 5678</p>
+                        <p class="text-secondary mb-2 small"><i class="fas fa-envelope me-2 text-primary"></i>info@ptnmi.com</p>
+                        <p class="text-secondary mb-2 small"><i class="fas fa-clock me-2 text-primary"></i>Mon - Fri: 08:30 - 17:30 WIB</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright py-4" style="background: #080808; color: #888888; border-top: 1px solid #1a1a1a;">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-md-0">
+                    <span class="small"><i class="fas fa-copyright me-2"></i><strong>PT Nusa Medika Indonesia</strong>, All Rights Reserved.</span>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <span class="small">Official Medical Equipment Partner</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+        
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+
+        <!-- CSS Clean Override -->
+    <style>
+        .goog-te-banner-frame, .skiptranslate, .goog-te-balloon-frame, #goog-gt-tt {
+            display: none !important;
+            visibility: hidden !important;
+            pointer-events: none !important;
+        }
+        body {
+            top: 0px !important;
+            position: static !important;
+        }
+        .goog-text-highlight {
+            background-color: transparent !important;
+            box-shadow: none !important;
+        }
+    </style>
+
+    <!-- Robust Language Switcher Script -->
+    <script type="text/javascript">
+        // Toggle Dropdown Menu
+        function toggleLangDropdown(e) {
+            e.stopPropagation();
+            var menu = document.getElementById('customLangMenu');
+            if (menu.style.display === 'none' || menu.style.display === '') {
+                menu.style.display = 'block';
+            } else {
+                menu.style.display = 'none';
+            }
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            var menu = document.getElementById('customLangMenu');
+            var btn = document.getElementById('btnGlobeToggle');
+            if (menu && !menu.contains(e.target) && e.target !== btn) {
+                menu.style.display = 'none';
+            }
+        });
+
+        // Google Translate Engine Initialization
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'id,en,zh-CN',
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+
+        // Trigger Language Change
+        function selectLanguage(langCode) {
+            // Close menu
+            document.getElementById('customLangMenu').style.display = 'none';
+
+            // Set Google Translate Cookie
+            document.cookie = "googtrans=/en/" + langCode + "; path=/";
+            document.cookie = "googtrans=/en/" + langCode + "; domain=" + window.location.hostname + "; path=/";
+
+            // Try clicking native Google select if ready
+            var selectElement = document.querySelector('#google_translate_element select');
+            if (selectElement) {
+                selectElement.value = langCode;
+                selectElement.dispatchEvent(new Event('change'));
+            } else {
+                // Fallback reload page to apply cookie translation
+                window.location.reload();
+            }
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> 
+        
+    </body>
+
+</html>

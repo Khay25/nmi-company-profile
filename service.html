@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+       <meta charset="utf-8">
+    <title>PT NMI - Nusa Medika Indonesia</title>
+    
+    <!-- Favicon Logo PT NMI -->
+    <link rel="icon" href="img/Logo-NMI.jpg" type="image/png">
+
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+      <!-- Navbar & Hero Start -->
+<div class="container-fluid position-relative p-0">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
+        <a href="index.html" class="navbar-brand p-0">
+            <h1 class="text-primary m-0 d-flex align-items-center">
+                <img src="img/Logo-NMI-New.jpg" alt="Logo PT NMI" class="me-3" style="height: 45px; width: auto;">
+                Nusantara Medcare Indonesia
+            </h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="fa fa-bars"></span>
+        </button>
+               <div class="navbar-nav ms-auto py-0 d-flex align-items-center">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="about.html" class="nav-item nav-link ">About</a>
+
+                <!-- Products Dropdown (EDAN Style) -->
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Products</a>
+                            <div class="dropdown-menu m-0 shadow border-0 rounded-3">
+                                <a href="products/poct.html" class="dropdown-item py-2 fw-semibold">POCT</a>
+                                <a href="products/ivd.html" class="dropdown-item py-2 fw-semibold">IVD</a>
+                                <a href="products/ultrasound.html" class="dropdown-item py-2 fw-semibold">Ultrasound</a>
+                                <a href="products/monitoring.html" class="dropdown-item py-2 fw-semibold">Patient Monitoring</a>
+                                <a href="products/ecg.html" class="dropdown-item py-2 fw-semibold">ECG</a>
+                                <a href="products/obgyn.html" class="dropdown-item py-2 fw-semibold">OB & GYN</a>
+                            </div>
+                        </div>
+                        
+                <!-- Services Menu (Tetap Ada) -->
+                <a href="service.html" class="nav-item nav-link active">Services</a>
+
+                <!-- Pages Dropdown (Tetap Ada) -->
+                 <!--
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                    <div class="dropdown-menu m-0">
+                        <a href="appointment.html" class="dropdown-item">Appointment</a>
+                        <a href="feature.html" class="dropdown-item">Features</a>
+                        <a href="blog.html" class="dropdown-item">Our Blog</a>
+                        <a href="team.html" class="dropdown-item">Our Team</a>
+                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        <a href="404.html" class="dropdown-item">404 Page</a>
+                    </div>
+                </div>
+            -->
+                <a href="contact.html" class="nav-item nav-link me-3">Contact Us</a>
+                      <!-- Language Selector (Custom Standalone JS - No Bootstrap Dependency) -->
+                        <div class="position-relative me-3" style="z-index: 9999;">
+                            <button class="btn btn-outline-primary rounded-circle p-0 d-flex align-items-center justify-content-center shadow-sm" type="button" id="btnGlobeToggle" onclick="toggleLangDropdown(event)" style="width: 40px; height: 40px; background-color: #ffffff;">
+                                <i class="fa fa-globe fs-5 text-primary" style="pointer-events: none;"></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end shadow border-0 mt-2 position-absolute" id="customLangMenu" style="display: none; min-width: 140px; right: 0; top: 100%;">
+                                <li><a class="dropdown-item small py-2 fw-semibold" href="javascript:void(0)" onclick="selectLanguage('id')">🇮🇩 Indonesia (ID)</a></li>
+                                <li><a class="dropdown-item small py-2 fw-semibold" href="javascript:void(0)" onclick="selectLanguage('en')">🇬🇧 English (EN)</a></li>
+                                <li><a class="dropdown-item small py-2 fw-semibold" href="javascript:void(0)" onclick="selectLanguage('zh-CN')">🇨🇳 Chinese (ZH)</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Hidden Google Translate Container -->
+                        <div id="google_translate_element" style="display: none !important; visibility: hidden !important;"></div>
+                    </div>
+            </nav>
+        </div>
+        <!-- Navbar End -->
+
+
+       <!-- Header Start (Background Video Full Banner) -->
+    <div class="container-fluid bg-breadcrumb position-relative overflow-hidden py-5" style="padding-top: 140px !important; padding-bottom: 80px !important;">
+        <!-- Background Video -->
+        <video autoplay loop muted playsinline style="position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; transform: translate(-50%, -50%); object-fit: cover; z-index: 1; filter: brightness(0.5);">
+            <source src="ShortVideoforHome/about-vid.mp4" type="video/mp4">
+        </video>
+
+        <!-- Content Overlay Teks Header -->
+        <div class="container text-center py-5 position-relative" style="z-index: 2;">
+            <h1 class="text-white display-3 mb-3 animated slideInDown fw-bold">Service & Support</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a class="text-white" href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
+                    <li class="breadcrumb-item text-primary active" aria-current="page">Service & Support</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+      <!-- Our Core Services Section Start -->
+<div class="container-fluid py-5 bg-white position-relative">
+    <div class="container py-4">
+        
+        <!-- Section Title -->
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <h4 class="text-primary text-uppercase fw-bold" style="letter-spacing: 2px;">Layanan Utama</h4>
+            <h1 class="display-5 fw-bold mb-3">Our Core Services</h1>
+            <p class="text-muted fs-6">
+                Dukungan purna jual menyeluruh untuk memastikan keandalan, akurasi, dan operasional jangka panjang alat medis Anda.
+            </p>
+        </div>
+
+        <!-- 3 Core Service Cards -->
+        <div class="row g-4 justify-content-center">
+            
+            <!-- Service 1: Maintenance & Repair -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-light">
+                    <div class="position-relative overflow-hidden" style="height: 200px;">
+                        <img src="img/technicalsupport-service.jpg" class="w-100 h-100" style="object-fit: cover;" alt="Maintenance & Repair">
+                        <div class="position-absolute top-0 start-0 m-3 bg-primary text-white rounded-circle d-flex align-items-center justify-content-center shadow" style="width: 45px; height: 45px;">
+                            <i class="fa fa-tools fs-5"></i>
+                        </div>
+                    </div>
+                    <div class="card-body p-4 text-start">
+                        <h4 class="fw-bold text-dark mb-3">Maintenance & Repair</h4>
+                        <p class="text-secondary small mb-0" style="line-height: 1.6;">
+                            Layanan pemeliharaan berkala (preventive maintenance), perbaikan darurat onsite, serta troubleshooting cepat untuk menjaga perangkat medis bebas dari masalah.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 2: Technical & Clinical Training -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-light">
+                    <div class="position-relative overflow-hidden" style="height: 200px;">
+                        <img src="img/technicalsupport-service.jpg" class="w-100 h-100" style="object-fit: cover;" alt="Application Training">
+                        <div class="position-absolute top-0 start-0 m-3 bg-primary text-white rounded-circle d-flex align-items-center justify-content-center shadow" style="width: 45px; height: 45px;">
+                            <i class="fa fa-user-graduate fs-5"></i>
+                        </div>
+                    </div>
+                    <div class="card-body p-4 text-start">
+                        <h4 class="fw-bold text-dark mb-3">Application & Clinical Training</h4>
+                        <p class="text-secondary small mb-0" style="line-height: 1.6;">
+                            Pelatihan intensif bagi dokter, perawat, dan teknisi medis rumah sakit agar dapat mengoperasikan dan mengoptimalkan seluruh fitur instrumen secara tepat.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 3: Spare Parts & Calibration -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-light">
+                    <div class="position-relative overflow-hidden" style="height: 200px;">
+                        <img src="img/technicalsupport-service.jpg" class="w-100 h-100" style="object-fit: cover;" alt="Spare Parts & Calibration">
+                        <div class="position-absolute top-0 start-0 m-3 bg-primary text-white rounded-circle d-flex align-items-center justify-content-center shadow" style="width: 45px; height: 45px;">
+                            <i class="fa fa-shield-alt fs-5"></i>
+                        </div>
+                    </div>
+                    <div class="card-body p-4 text-start">
+                        <h4 class="fw-bold text-dark mb-3">Genuine Parts & Calibration</h4>
+                        <p class="text-secondary small mb-0" style="line-height: 1.6;">
+                            Jaminan ketersediaan suku cadang dan reagen asli pabrikan EDAN serta kalibrasi laboratorium berkala untuk hasil pemeriksaan yang akurat dan legal.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<!-- Our Core Services Section End -->
+
+
+       <!-- Service Network Section Start (EDAN Style Dual-Panel) -->
+<div class="container-fluid py-5 bg-light position-relative">
+    <div class="container py-4">
+        
+        <!-- Section Title -->
+        <div class="text-center mx-auto mb-5" style="max-width: 650px;">
+            <h1 class="display-5 fw-bold text-success mb-2">Service Network</h1>
+            <p class="text-muted fs-6">
+                Klik pada titik jaringan di peta untuk melihat detail alamat kantor dan pusat layanan resmi PT NMI.
+            </p>
+        </div>
+
+        <!-- Network Card Component -->
+        <div class="card border-0 shadow-lg overflow-hidden rounded-4 mb-5" style="background: #eef2f5;">
+            <div class="row g-0 align-items-stretch">
+                
+                <!-- Left Column: Interactive Indonesia Map -->
+                <div class="col-lg-8 p-4 p-md-5 position-relative d-flex align-items-center justify-content-center bg-white">
+                    <div class="indonesia-map-container position-relative text-center w-100" style="min-height: 400px;">
+                        
+                        <!-- High Precision Indonesia SVG Vector Map -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 450" class="w-100 h-auto" style="max-height: 420px; fill: #cbd5e1; filter: drop-shadow(0px 6px 12px rgba(0,0,0,0.05));">
+                            <g id="indonesia-interactive-map">
+                                <!-- Sumatra -->
+                                <path d="M125,235 C100,190 70,140 50,110 C45,100 55,85 75,70 C105,50 145,40 185,30 C195,30 205,45 190,70 C170,105 145,150 145,190 C145,210 170,230 200,245 C230,260 250,270 240,285 C220,305 175,280 145,255 Z" />
+                                <path d="M210,165 C220,155 235,160 225,175 C215,185 205,175 210,165 Z" />
+                                
+                                <!-- Jawa & Bali -->
+                                <path d="M275,320 C320,320 370,318 420,322 C470,326 510,324 535,328 C530,342 485,340 435,338 C385,336 335,338 285,335 C270,332 265,325 275,320 Z" />
+                                <path d="M545,330 C555,328 560,334 550,338 C542,340 538,335 545,330 Z" />
+
+                                <!-- Nusa Tenggara -->
+                                <path d="M565,332 C585,330 600,335 590,340 C575,342 560,338 565,332 Z" />
+                                <path d="M610,332 C640,330 655,335 645,342 C625,345 605,340 610,332 Z" />
+                                <path d="M670,335 C700,330 715,340 695,348 C675,350 660,342 670,335 Z" />
+
+                                <!-- Kalimantan -->
+                                <path d="M365,135 C400,90 445,95 490,110 C525,125 535,150 525,180 C510,215 475,235 435,230 C395,225 365,190 365,135 Z" />
+
+                                <!-- Sulawesi -->
+                                <path d="M560,135 C590,130 615,135 630,150 C610,165 585,165 575,175 C585,190 610,195 635,200 C605,210 580,205 570,218 C575,240 585,260 590,280 C570,280 560,255 558,230 C555,200 558,170 560,135 Z" />
+
+                                <!-- Maluku -->
+                                <path d="M670,135 C685,125 695,140 685,160 C675,160 665,145 670,135 Z" />
+                                <path d="M660,210 C690,205 705,215 685,222 C665,222 650,215 660,210 Z" />
+
+                                <!-- Papua -->
+                                <path d="M740,175 C760,155 785,150 810,165 C840,170 870,165 900,170 C930,175 960,185 975,205 C980,235 965,265 935,285 C905,295 875,290 845,275 C825,260 790,250 765,240 C745,225 735,195 740,175 Z" />
+                            </g>
+                        </svg>
+                        
+                        <!-- Interactive Branch Pins -->
+                        <!-- 1. Jakarta HQ -->
+                        <div class="map-pin pin-click active-pin" style="top: 73%; left: 30%;" data-city="jakarta">
+                            <div class="pin-pulse bg-success"></div>
+                            <div class="pin-dot bg-success"></div>
+                            <span class="pin-label fw-bold">Jakarta, Indonesia</span>
+                        </div>
+
+                        <!-- 2. Medan Hub -->
+                        <div class="map-pin pin-click" style="top: 24%; left: 13%;" data-city="medan">
+                            <div class="pin-pulse bg-success"></div>
+                            <div class="pin-dot bg-success"></div>
+                            <span class="pin-label">Medan, Indonesia</span>
+                        </div>
+
+                        <!-- 3. Surabaya Hub -->
+                        <div class="map-pin pin-click" style="top: 73%; left: 47%;" data-city="surabaya">
+                            <div class="pin-pulse bg-success"></div>
+                            <div class="pin-dot bg-success"></div>
+                            <span class="pin-label">Surabaya, Indonesia</span>
+                        </div>
+
+                        <!-- 4. Balikpapan Hub -->
+                        <div class="map-pin pin-click" style="top: 42%; left: 47%;" data-city="balikpapan">
+                            <div class="pin-pulse bg-success"></div>
+                            <div class="pin-dot bg-success"></div>
+                            <span class="pin-label">Balikpapan, Indonesia</span>
+                        </div>
+
+                        <!-- 5. Makassar Hub -->
+                        <div class="map-pin pin-click" style="top: 54%; left: 57%;" data-city="makassar">
+                            <div class="pin-pulse bg-success"></div>
+                            <div class="pin-dot bg-success"></div>
+                            <span class="pin-label">Makassar, Indonesia</span>
+                        </div>
+
+                        <!-- 6. Jayapura Hub -->
+                        <div class="map-pin pin-click" style="top: 45%; left: 91%;" data-city="jayapura">
+                            <div class="pin-pulse bg-success"></div>
+                            <div class="pin-dot bg-success"></div>
+                            <span class="pin-label">Jayapura, Indonesia</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Right Column: EDAN Dark Detail Panel -->
+<div class="col-lg-4 p-4 p-md-5 text-white d-flex flex-column justify-content-center" style="background-color: #383838;">
+    
+    <!-- City Name Header -->
+    <h3 id="network-city" class="fw-bold mb-4" style="color: #7cc52b;">Jakarta, Indonesia</h3>
+    
+    <!-- City Image (Default diset ke foto gedung kantor) -->
+    <div class="mb-4 overflow-hidden rounded-3 shadow-sm" style="max-height: 180px;">
+        <img id="network-img" src="img/foto-nmi-maqna.jpg" alt="Branch Office" class="w-100 h-100" style="object-fit: cover; transition: all 0.3s ease;">
+    </div>
+    
+    <!-- Address Info -->
+    <div class="mb-3">
+        <h6 class="fw-bold text-uppercase mb-1" style="color: #7cc52b; font-size: 0.85rem; letter-spacing: 1px;">Address</h6>
+        <p id="network-address" class="text-white-50 small mb-0" style="line-height: 1.6;">
+            APARTEMENT MAQNA RESIDENCE RUKO NO.8-9 JL. MERUYA ILIR RAYA NO. 88 RT.001 RW.005, MERUYA UTARA, KEMBANGAN, KOTA ADM. JAKARTA BARAT, 11620
+        </p>
+    </div>
+
+    <!-- Tel Info -->
+    <div class="mb-3">
+        <h6 class="fw-bold text-uppercase mb-1" style="color: #7cc52b; font-size: 0.85rem; letter-spacing: 1px;">Tel</h6>
+        <p id="network-tel" class="text-white-50 small mb-0">+62 21 1234 5678</p>
+    </div>
+
+    <!-- Fax Info -->
+    <div>
+        <h6 class="fw-bold text-uppercase mb-1" style="color: #7cc52b; font-size: 0.85rem; letter-spacing: 1px;">Fax</h6>
+        <p id="network-fax" class="text-white-50 small mb-0">+62 21 1234 5679</p>
+    </div>
+
+</div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- Service Network Section End -->
+
+<!-- Dynamic Network Switcher Script -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const branchData = {
+        jakarta: {
+            city: "Jakarta, Indonesia",
+            img: "img/foto-nmi-maqna.jpg",
+            address: "APARTEMENT MAQNA RESIDENCE RUKO NO.8-9 JL. MERUYA ILIR RAYA NO. 88 RT.001 RW.005, MERUYA UTARA, KEMBANGAN, KOTA ADM. JAKARTA BARAT, 11620",
+            tel: "+62 21 1234 5678",
+            fax: "+62 21 1234 5679"
+        },
+        medan: {
+            city: "Medan, Indonesia",
+            img: "img/foto-nmi-maqna.jpg", // Ganti kalau ada foto khusus Medan
+            address: "JL. GATOT SUBROTO NO. 142, MEDAN PETISAH, KOTA MEDAN, SUMATERA UTARA 20111",
+            tel: "+62 61 9876 5432",
+            fax: "N/A"
+        },
+        surabaya: {
+            city: "Surabaya, Indonesia",
+            img: "img/foto-nmi-maqna.jpg", // Ganti kalau ada foto khusus Surabaya
+            address: "RUKO BASUKI RACHMAT BLOK B-3, JL. BASUKI RACHMAT NO. 55, SURABAYA, JAWA TIMUR 60271",
+            tel: "+62 31 8765 4321",
+            fax: "+62 31 8765 4322"
+        },
+        balikpapan: {
+            city: "Balikpapan, Indonesia",
+            img: "img/foto-nmi-maqna.jpg", // Ganti kalau ada foto khusus Balikpapan
+            address: "JL. JENDERAL SUDIRMAN NO. 88, BALIKPAPAN SELATAN, KALIMANTAN TIMUR 76114",
+            tel: "+62 542 765 432",
+            fax: "N/A"
+        },
+        makassar: {
+            city: "Makassar, Indonesia",
+            img: "img/foto-nmi-maqna.jpg", // Ganti kalau ada foto khusus Makassar
+            address: "JL. AP PETTARANI RUKO CLANTO NO. 12, MAKASSAR, SULAWESI SELATAN 90222",
+            tel: "+62 411 654 321",
+            fax: "N/A"
+        },
+        jayapura: {
+            city: "Jayapura, Indonesia",
+            img: "img/foto-nmi-maqna.jpg", // Ganti kalau ada foto khusus Jayapura
+            address: "JL. AHMAD YANI NO. 45, JAYAPURA UTARA, PAPUA 99111",
+            tel: "+62 967 543 210",
+            fax: "N/A"
+        }
+    };
+
+    const pins = document.querySelectorAll(".pin-click");
+    const cityEl = document.getElementById("network-city");
+    const imgEl = document.getElementById("network-img");
+    const addressEl = document.getElementById("network-address");
+    const telEl = document.getElementById("network-tel");
+    const faxEl = document.getElementById("network-fax");
+
+    pins.forEach(pin => {
+        pin.addEventListener("click", function () {
+            const cityKey = this.getAttribute("data-city");
+            const data = branchData[cityKey];
+
+            if (data) {
+                cityEl.textContent = data.city;
+                imgEl.src = data.img;
+                addressEl.textContent = data.address;
+                telEl.textContent = data.tel;
+                faxEl.textContent = data.fax;
+            }
+        });
+    });
+});
+</script>
+
+<!-- Service Solutions Section Start (Fixed No Blank Content) -->
+<div class="container-fluid py-5 bg-white position-relative">
+    <div class="container py-4">
+        
+        <!-- Section Title -->
+        <div class="text-center mx-auto mb-4" style="max-width: 700px;">
+            <h1 class="display-5 fw-bold text-dark mb-3">Service Solutions</h1>
+            <p class="text-muted fs-6">
+                Kami berkomitmen membantu Anda mengoptimalkan performa dan keberlanjutan peralatan serta perangkat lunak medis melalui dukungan teknis langsung dari spesialis PT NMI.
+            </p>
+        </div>
+
+        <!-- Sub-Navigation Tabs Bar -->
+        <div class="border-bottom mb-4 overflow-auto">
+            <ul class="nav nav-tabs justify-content-start justify-content-md-center flex-nowrap border-0" id="serviceSolutionsTab" role="tablist" style="min-width: 750px;">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link solution-tab-btn active fw-bold px-3 py-2 me-3" id="informatics-tab" data-bs-toggle="tab" data-bs-target="#informatics" type="button" role="tab" aria-controls="informatics" aria-selected="true">Health Informatics</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link solution-tab-btn px-3 py-2 me-3" id="support-tab" data-bs-toggle="tab" data-bs-target="#support" type="button" role="tab" aria-controls="support" aria-selected="false">Technical Support</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link solution-tab-btn px-3 py-2 me-3" id="training-tab" data-bs-toggle="tab" data-bs-target="#training" type="button" role="tab" aria-controls="training" aria-selected="false">Training</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link solution-tab-btn px-3 py-2 me-3" id="warranty-tab" data-bs-toggle="tab" data-bs-target="#warranty" type="button" role="tab" aria-controls="warranty" aria-selected="false">Warranty</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link solution-tab-btn px-3 py-2 me-3" id="vulnerability-tab" data-bs-toggle="tab" data-bs-target="#vulnerability" type="button" role="tab" aria-controls="vulnerability" aria-selected="false">Vulnerability</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link solution-tab-btn px-3 py-2" id="cybersecurity-tab" data-bs-toggle="tab" data-bs-target="#cybersecurity" type="button" role="tab" aria-controls="cybersecurity" aria-selected="false">Cybersecurity Update</button>
+                </li>
+            </ul>
+        </div>
+
+       <!-- Tab Contents (Full Clean Code - Foto Pas & Tidak Kepotong) -->
+        <div class="tab-content" id="serviceSolutionsTabContent">
+            
+            <!-- Tab 1: Health Informatics -->
+            <div class="tab-pane fade show active" id="informatics" role="tabpanel" aria-labelledby="informatics-tab">
+                <div class="row g-4 align-items-center">
+                    <div class="col-12 mb-3">
+                        <div class="overflow-hidden rounded-3 shadow-sm bg-light d-flex align-items-center justify-content-center" style="min-height: 280px; max-height: 400px;">
+                            <img src="img/healthinfo-service.jpg" class="w-100 h-auto" style="max-height: 400px; object-fit: contain;" alt="Health Informatics">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h3 class="fw-bold text-dark mb-2">Health Informatics</h3>
+                        <p class="fs-5 text-success fw-semibold mb-3">
+                            Today, the medical industry is no longer an island of information. Data connectivity has become essential.
+                        </p>
+                        <a href="contact.html" class="btn btn-outline-secondary rounded-pill px-4 py-2 small">Learn More &rarr;</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <ul class="list-unstyled text-muted small pe-lg-3">
+                            <li class="mb-2 d-flex align-items-start">
+                                <span class="text-success me-2">&#8226;</span>
+                                Prosedur kendali risiko terpadu sepanjang siklus produk untuk memastikan keamanan jaringan dan data medis.
+                            </li>
+                            <li class="mb-3 d-flex align-items-start">
+                                <span class="text-success me-2">&#8226;</span>
+                                Interaktivitas program yang dirancang sesuai standar IHE, mendukung integrasi informasi HL7, DICOM, dan GDT.
+                            </li>
+                        </ul>
+                        <a href="#" class="text-success fw-bold text-decoration-none small">
+                            | Compatible EMR Vendors <i class="bi bi-box-arrow-up-right ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 2: Technical Support -->
+            <div class="tab-pane fade" id="support" role="tabpanel" aria-labelledby="support-tab">
+                <div class="row g-4 align-items-center">
+                    <div class="col-12 mb-3">
+                        <div class="overflow-hidden rounded-3 shadow-sm bg-light d-flex align-items-center justify-content-center" style="min-height: 280px; max-height: 400px;">
+                            <img src="img/technicalsupport-service.jpg" class="w-100 h-auto" style="max-height: 400px; object-fit: contain;" alt="Technical Support">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h3 class="fw-bold text-dark mb-2">Technical Support</h3>
+                        <p class="fs-5 text-success fw-semibold mb-3">
+                            Penanganan kendala teknis dan pemeliharaan proaktif secara cepat oleh tim senior ahli NMI.
+                        </p>
+                        <a href="contact.html" class="btn btn-outline-secondary rounded-pill px-4 py-2 small">Learn More &rarr;</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <ul class="list-unstyled text-muted small pe-lg-3">
+                            <li class="mb-2 d-flex align-items-start">
+                                <span class="text-success me-2">&#8226;</span>
+                                Layanan hotline 24/7 dan remote troubleshooting langsung dari spesialis teknis bersertifikat.
+                            </li>
+                            <li class="mb-3 d-flex align-items-start">
+                                <span class="text-success me-2">&#8226;</span>
+                                Kunjungan pemeliharaan pencegahan (preventive maintenance) secara berkala di lokasi faskes Anda.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 3: Training -->
+            <div class="tab-pane fade" id="training" role="tabpanel" aria-labelledby="training-tab">
+                <div class="row g-4 align-items-center">
+                    <div class="col-12 mb-3">
+                        <div class="overflow-hidden rounded-3 shadow-sm bg-light d-flex align-items-center justify-content-center" style="min-height: 280px; max-height: 400px;">
+                            <img src="img/training-service.jpg" class="w-100 h-auto" style="max-height: 400px; object-fit: contain;" alt="Training">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h3 class="fw-bold text-dark mb-2">Training</h3>
+                        <p class="fs-5 text-success fw-semibold mb-3">
+                            Pemberdayaan tenaga kesehatan untuk menguasai pengoperasian instrumen medis secara optimal.
+                        </p>
+                        <a href="contact.html" class="btn btn-outline-secondary rounded-pill px-4 py-2 small">Learn More &rarr;</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <ul class="list-unstyled text-muted small pe-lg-3">
+                            <li class="mb-2 d-flex align-items-start">
+                                <span class="text-success me-2">&#8226;</span>
+                                Modul pelatihan teknis dan aplikasi klinis yang dirancang khusus untuk operator & teknisi medis.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 4: Warranty -->
+            <div class="tab-pane fade" id="warranty" role="tabpanel" aria-labelledby="warranty-tab">
+                <div class="row g-4 align-items-center">
+                    <div class="col-12 mb-3">
+                        <div class="overflow-hidden rounded-3 shadow-sm bg-light d-flex align-items-center justify-content-center" style="min-height: 280px; max-height: 400px;">
+                            <img src="img/warranty-service.jpg" class="w-100 h-auto" style="max-height: 400px; object-fit: contain;" alt="Warranty">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h3 class="fw-bold text-dark mb-2">Warranty</h3>
+                        <p class="fs-5 text-success fw-semibold mb-3">
+                            Jaminan perlindungan komprehensif untuk investasi perangkat medis jangka panjang Anda.
+                        </p>
+                        <a href="contact.html" class="btn btn-outline-secondary rounded-pill px-4 py-2 small">Learn More &rarr;</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <ul class="list-unstyled text-muted small pe-lg-3">
+                            <li class="mb-2 d-flex align-items-start">
+                                <span class="text-success me-2">&#8226;</span>
+                                Garansi suku cadang original dan jaminan penggantian unit darurat jika terjadi kerusakan kritis.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 5: Vulnerability -->
+            <div class="tab-pane fade" id="vulnerability" role="tabpanel" aria-labelledby="vulnerability-tab">
+                <div class="row g-4 align-items-center">
+                    <div class="col-12 mb-3">
+                        <div class="overflow-hidden rounded-3 shadow-sm bg-light d-flex align-items-center justify-content-center" style="min-height: 280px; max-height: 400px;">
+                            <img src="img/cybersec-service.jpg" class="w-100 h-auto" style="max-height: 400px; object-fit: contain;" alt="Vulnerability">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h3 class="fw-bold text-dark mb-2">Vulnerability</h3>
+                        <p class="fs-5 text-success fw-semibold mb-3">
+                            Pemantauan serta mitigasi celah keamanan sistem medis secara berkala.
+                        </p>
+                        <a href="contact.html" class="btn btn-outline-secondary rounded-pill px-4 py-2 small">Learn More &rarr;</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <ul class="list-unstyled text-muted small pe-lg-3">
+                            <li class="mb-2 d-flex align-items-start">
+                                <span class="text-success me-2">&#8226;</span>
+                                Audit keamanan perangkat keras & lunak secara teratur untuk mencegah potensi ancaman sistemik.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 6: Cybersecurity Update -->
+            <div class="tab-pane fade" id="cybersecurity" role="tabpanel" aria-labelledby="cybersecurity-tab">
+                <div class="row g-4 align-items-center">
+                    <div class="col-12 mb-3">
+                        <div class="overflow-hidden rounded-3 shadow-sm bg-light d-flex align-items-center justify-content-center" style="min-height: 280px; max-height: 400px;">
+                            <img src="img/cybersec-service.jpg" class="w-100 h-auto" style="max-height: 400px; object-fit: contain;" alt="Cybersecurity Update">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h3 class="fw-bold text-dark mb-2">Cybersecurity Update</h3>
+                        <p class="fs-5 text-success fw-semibold mb-3">
+                            Pembaruan firmware & patch keamanan siber berkelanjutan.
+                        </p>
+                        <a href="contact.html" class="btn btn-outline-secondary rounded-pill px-4 py-2 small">Learn More &rarr;</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <ul class="list-unstyled text-muted small pe-lg-3">
+                            <li class="mb-2 d-flex align-items-start">
+                                <span class="text-success me-2">&#8226;</span>
+                                Distribusi patch enkripsi terbaru untuk menjamin perlindungan privasi data medis pasien dari peretasan.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        </div>
+
+    </div>
+</div>
+<!-- Service Solutions Section End -->
+
+
+          <!-- Footer Start (PT NMI Style) -->
+    <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s" style="background: #111111; color: #a0a0a0;">
+        <div class="container py-5">
+            <div class="row g-5">
+                <!-- Kolom 1: Perusahaan -->
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <div class="mb-3">
+                            <img src="img/Logo-NMI.jpg" alt="PT NMI Logo" style="height: 45px; width: auto; display: block; border-radius: 4px;">
+                        </div>
+                        <p class="mb-4 small" style="line-height: 1.6;">
+                            PT Nusa Medika Indonesia is a trusted distributor of high-quality medical equipment, bringing innovation and value to support healthcare advancement across Indonesia.
+                        </p>
+                        <div class="d-flex align-items-center gap-2">
+                            <a class="btn btn-primary btn-sm-square rounded-circle" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-primary btn-sm-square rounded-circle" href="#"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-primary btn-sm-square rounded-circle" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kolom 2: Quick Links -->
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h5 class="text-white fw-bold mb-4">Quick Links</h5>
+                        <a href="index.html" class="text-secondary text-decoration-none mb-2 small"><i class="fas fa-angle-right me-2 text-primary"></i>Home</a>
+                        <a href="about.html" class="text-secondary text-decoration-none mb-2 small"><i class="fas fa-angle-right me-2 text-primary"></i>About PT NMI</a>
+                        <a href="service.html" class="text-secondary text-decoration-none mb-2 small"><i class="fas fa-angle-right me-2 text-primary"></i>Product Portfolio</a>
+                        <a href="blog.html" class="text-secondary text-decoration-none mb-2 small"><i class="fas fa-angle-right me-2 text-primary"></i>News & Events</a>
+                        <a href="contact.html" class="text-secondary text-decoration-none mb-2 small"><i class="fas fa-angle-right me-2 text-primary"></i>Contact Us</a>
+                    </div>
+                </div>
+
+                <!-- Kolom 3: Product Series -->
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h5 class="text-white fw-bold mb-4">Product Series</h5>
+                        <a href="products/poct.html" class="text-secondary text-decoration-none mb-2 small"><i class="fas fa-angle-right me-2 text-primary"></i>Point-of-Care Testing (POCT)</a>
+                        <a href="products/ivd.html" class="text-secondary text-decoration-none mb-2 small"><i class="fas fa-angle-right me-2 text-primary"></i>In-Vitro Diagnostics (IVD)</a>
+                        <a href="products/ultrasound.html" class="text-secondary text-decoration-none mb-2 small"><i class="fas fa-angle-right me-2 text-primary"></i>Ultrasound Imaging</a>
+                        <a href="products/monitoring.html" class="text-secondary text-decoration-none mb-2 small"><i class="fas fa-angle-right me-2 text-primary"></i>Patient Monitoring System</a>
+                        <a href="products/ecg.html" class="text-secondary text-decoration-none mb-2 small"><i class="fas fa-angle-right me-2 text-primary"></i>Diagnostic ECG</a>
+                    </div>
+                </div>
+
+
+                <!-- Kolom 4: Contact Info -->
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h5 class="text-white fw-bold mb-4">Contact Info</h5>
+                        <p class="text-secondary mb-2 small"><i class="fa fa-map-marker-alt me-2 text-primary"></i>Jakarta Barat, Indonesia</p>
+                        <p class="text-secondary mb-2 small"><i class="fas fa-phone-alt me-2 text-primary"></i>+62 21 1234 5678</p>
+                        <p class="text-secondary mb-2 small"><i class="fas fa-envelope me-2 text-primary"></i>info@ptnmi.com</p>
+                        <p class="text-secondary mb-2 small"><i class="fas fa-clock me-2 text-primary"></i>Mon - Fri: 08:30 - 17:30 WIB</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright py-4" style="background: #080808; color: #888888; border-top: 1px solid #1a1a1a;">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-md-0">
+                    <span class="small"><i class="fas fa-copyright me-2"></i><strong>PT Nusa Medika Indonesia</strong>, All Rights Reserved.</span>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <span class="small">Official Medical Equipment Partner</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+        
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+
+        <!-- CSS Clean Override -->
+    <style>
+        .goog-te-banner-frame, .skiptranslate, .goog-te-balloon-frame, #goog-gt-tt {
+            display: none !important;
+            visibility: hidden !important;
+            pointer-events: none !important;
+        }
+        body {
+            top: 0px !important;
+            position: static !important;
+        }
+        .goog-text-highlight {
+            background-color: transparent !important;
+            box-shadow: none !important;
+        }
+    </style>
+
+    <!-- Robust Language Switcher Script -->
+    <script type="text/javascript">
+        // Toggle Dropdown Menu
+        function toggleLangDropdown(e) {
+            e.stopPropagation();
+            var menu = document.getElementById('customLangMenu');
+            if (menu.style.display === 'none' || menu.style.display === '') {
+                menu.style.display = 'block';
+            } else {
+                menu.style.display = 'none';
+            }
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            var menu = document.getElementById('customLangMenu');
+            var btn = document.getElementById('btnGlobeToggle');
+            if (menu && !menu.contains(e.target) && e.target !== btn) {
+                menu.style.display = 'none';
+            }
+        });
+
+        // Google Translate Engine Initialization
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'id,en,zh-CN',
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+
+        // Trigger Language Change
+        function selectLanguage(langCode) {
+            // Close menu
+            document.getElementById('customLangMenu').style.display = 'none';
+
+            // Set Google Translate Cookie
+            document.cookie = "googtrans=/en/" + langCode + "; path=/";
+            document.cookie = "googtrans=/en/" + langCode + "; domain=" + window.location.hostname + "; path=/";
+
+            // Try clicking native Google select if ready
+            var selectElement = document.querySelector('#google_translate_element select');
+            if (selectElement) {
+                selectElement.value = langCode;
+                selectElement.dispatchEvent(new Event('change'));
+            } else {
+                // Fallback reload page to apply cookie translation
+                window.location.reload();
+            }
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> 
+        
+    </body>
+
+</html>
